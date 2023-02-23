@@ -1,0 +1,58 @@
+.footer-container {
+    background-color: black;
+    height: 100px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: sticky;
+    bottom: 0px;
+
+    .song-playing-container {
+        display: flex;
+        gap: 15px;
+
+        .like-icon-container {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.song-names-container {
+    .song-name {
+        font-size: 16px;
+    }
+
+    .song-artist-name {
+        font-size: 12px;
+    }
+}
+
+.song-controls-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .control-container {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .song-time-bar {
+        display: flex;
+        gap: 10px;
+    }
+}
+
+.control-panel-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.app-footer {
+    padding: 0;
+}
