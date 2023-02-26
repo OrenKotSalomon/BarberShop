@@ -7,13 +7,16 @@ export const clientService = {
 // demo first object, think more about it
 
 const client: object = {
-    id: '',
+    _id: '',
     email: '',
     username: '',
     password: '',
     businessName: '',
     logo: '',
     location: '',
+    styles: {
+
+    },
     packages: [
         {
             id: '',
@@ -31,30 +34,42 @@ const client: object = {
         day1: [
             {
                 // need to configure name og object
-                hour1: {
-                    taken: false
+                line: {
+                    id: '',
+                    time: '',
+                    istaken: false
                 },
-                hour2: {
-                    taken: true
+                line2: {
+                    id: '',
+                    time: '',
+                    istaken: false
                 },
-                hour3: {
-                    taken: false
-                }
+                line3: {
+                    id: '',
+                    time: '',
+                    istaken: false
+                },
 
             }
         ],
         day2: [
             {
                 // need to configure name og object
-                hour1: {
-                    taken: false
+                line: {
+                    id: '',
+                    time: '',
+                    istaken: false
                 },
-                hour2: {
-                    taken: true
+                line2: {
+                    id: '',
+                    time: '',
+                    istaken: false
                 },
-                hour3: {
-                    taken: false
-                }
+                line3: {
+                    id: '',
+                    time: '',
+                    istaken: false
+                },
 
             }
         ]
