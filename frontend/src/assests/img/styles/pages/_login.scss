@@ -1,0 +1,22 @@
+.login-signup {
+    padding: 40px;
+}
+
+.inputs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    .input-container {
+        display: flex;
+        justify-content: space-between;
+        width: 300px;
+    }
+}
+
+.login-txt {
+    text-align: center;
+    padding-bottom: 20px;
+}

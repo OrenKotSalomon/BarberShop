@@ -6,7 +6,6 @@ import download3 from "../assests/img/download3.jpg";
 export function HomePage() {
     return (
         <section className='home-page'>
-            <AppHeader />
 
             <section className="main-container">
                 <div className="img-container">
