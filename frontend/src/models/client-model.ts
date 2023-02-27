@@ -9,7 +9,5 @@ export interface Client {
     styles: object,
     packages: object[],
     futureAvailableCalender: object,
-    // availableSpots: object
     clients: object,
-
 }
