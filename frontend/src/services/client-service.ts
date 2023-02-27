@@ -1,7 +1,8 @@
 import { Client } from "../models/client-model"
+import { utilService } from "./util.service"
 
 export const clientService = {
-
+    createClient,
 }
 
 // demo first object, think more about it
@@ -107,12 +108,14 @@ const client: Client = {
     // products: [],
     // can be a whole different collection but if we are using GRAPHQL everything will be easier and awsome.
 }
+const BARBER_DB = 'barberDb'
 
 function createClient() {
     const clients = [
         client,
-        client,
+
     ]
+    utilService.saveToStorage(BARBER_DB, clients)
 }
 
 const user: object = {
