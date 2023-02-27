@@ -1,6 +1,6 @@
-export function MyBarbershop() {
-return <section className='my-barbershop'>
-<h1>My Barbershop</h1>
+export function MyClientshop() {
+return <section className='my-clientshop'>
+<h1>My Clientshop</h1>
 
 </section>
 }

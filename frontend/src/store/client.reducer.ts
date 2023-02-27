@@ -1,6 +1,6 @@
-const SET_CLIENT = 'SET_CLIENT'
+export const SET_CLIENT = 'SET_CLIENT'
 
-interface ClientState {
+export interface ClientState {
     client: object
 }
 

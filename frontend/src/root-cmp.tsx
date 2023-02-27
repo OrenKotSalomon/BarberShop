@@ -5,7 +5,8 @@ import { Routes, Route } from 'react-router'
 import { HomePage } from './pages/home-page';
 import { AppHeader } from './cmps/app-header';
 import { LoginSignUp } from './pages/login-page';
-import { BarberIndex } from './pages/barber-index';
+import { ClientIndex } from './pages/client-index';
+import { ClientList } from './pages/client-list';
 
 function App() {
   return <Fragment>
@@ -15,7 +16,8 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginSignUp />} />
-          <Route path="/barber" element={<BarberIndex />} />
+          <Route path="/client" element={<ClientList />} />
+          <Route path="/client/:clientId" element={<ClientIndex />} />
         </Routes>
       </div>
     </div>

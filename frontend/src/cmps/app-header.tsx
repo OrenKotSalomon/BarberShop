@@ -8,9 +8,9 @@ export function AppHeader() {
 
         <div className="logo" onClick={() => navigate('/')}>Logo</div>
         <nav className="nav-container">
-            <NavLink to='/barber'>Get started</NavLink>
+            <NavLink to='/client'>Get started</NavLink>
             <NavLink to='/login'>Log in</NavLink>
-            {/* <NavLink to='/barber'>Pricing</NavLink> */}
+            {/* <NavLink to='/client'>Pricing</NavLink> */}
         </nav>
     </section>
 

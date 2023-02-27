@@ -12,7 +12,9 @@
 //pages
 @import "pages/_home";
 @import "pages/login";
+@import "pages/client-list";
 
 //components
 
 @import "cmps/_app-header.scss";
+@import "cmps/_client-preview.scss";
