@@ -14,10 +14,10 @@ export function ClientList() {
 
   const loadClients = () => {
     setClients(clientService.getClients());
-};
+  };
 
   if (!clients.length) return <div>Loading...</div>;
   return <ul className="client-list">
-    {clients.map(client => <ClientPreview client={client} />  )}
+    {clients.map((client, idx) => <ClientPreview key={idx} client={client} />)}
   </ul>;
 }

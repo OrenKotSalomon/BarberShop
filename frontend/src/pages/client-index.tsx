@@ -4,25 +4,32 @@ import { useSelector } from 'react-redux'
 import { clientService } from "../services/client-service";
 import { ClientPricing } from "./client-pricing";
 import { ClientState } from "../store/client.reducer";
+import { loadClient } from "../store/client.action";
 import { Client } from "../models/client-model";
 
-interface IClient {
-  client: Client
-}
-const selectClient = (state: ClientState) => state.client
-
 export function ClientIndex() {
-  const { clientId } = useParams();
-//   const [client, setClient] = useState(null);
-// const client = useSelector<ClientState, IClient>(selectClient)
+  const { clientId } = useParams() as {
+    clientId: string
+  };
+  const [client, setClient] = useState({} as Client);
+  // const client = useSelector<ClientState, ClientState["client"]>((state) => state.client)
 
-//   useEffect(() => {
-//   }, []);
+  useEffect(() => {
+    getClient()
+  }, []);
 
-// if (!client) return <div>Loading...</div>
+  const getClient = async () => {
+    const currClient = await loadClient(clientId) as Client;
+    setClient(currClient)
+
+  }
+
+  console.log(client);
+
+  if (!client) return <div>Loading...</div>
   return (
     <section className="client-index">
-      <h1>Welcome to {clientId}</h1>
+      <h1>{client.businessName}</h1>
       <ClientPricing />
     </section>
   );
