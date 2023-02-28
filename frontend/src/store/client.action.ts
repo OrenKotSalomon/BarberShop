@@ -1,5 +1,4 @@
 
-import { clickOptions } from "@testing-library/user-event/dist/click";
 import { Client } from "../models/client-model";
 import { clientService } from "../services/client-service";
 import { SET_CLIENT } from "./client.reducer";

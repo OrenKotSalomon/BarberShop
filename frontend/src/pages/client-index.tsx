@@ -30,7 +30,7 @@ export function ClientIndex() {
   return (
     <section className="client-index">
       <h1>{client.businessName}</h1>
-      <ClientPricing />
+      <ClientPricing packages={client.packages} />
     </section>
   );
 }

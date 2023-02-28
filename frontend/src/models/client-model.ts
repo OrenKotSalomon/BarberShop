@@ -7,7 +7,12 @@ export interface Client {
     logo: string,
     location: string | number,
     styles: object,
-    packages: object[],
+    packages: {
+        description: string,
+        displayImg: string,
+        id: string,
+        price: number
+    }[]
     futureAvailableCalender: object,
     clients: object,
 }
