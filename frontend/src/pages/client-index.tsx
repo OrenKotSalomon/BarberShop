@@ -29,6 +29,7 @@ export function ClientIndex() {
   if (!client) return <div>Loading...</div>
   return (
     <section className="client-index">
+      <h1 className="welcome-title">Welcome Back *Username* !</h1>
       <h1>{client.businessName}</h1>
       <ClientPricing />
     </section>
