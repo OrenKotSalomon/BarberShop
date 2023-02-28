@@ -1,9 +1,11 @@
 import { Client } from "../models/client-model";
+import { storageService } from "./async-storage.service";
 import { utilService } from "./util.service";
 
 export const clientService = {
   createClient,
   getClients,
+  getById
 };
 
 // demo first object, think more about it
@@ -116,6 +118,11 @@ function createClient() {
 function getClients() {
   const client = utilService.loadFromStorage(CLIENT_DB);
   return client;
+}
+
+function getById(clientId: string) {
+  return storageService.get(CLIENT_DB, clientId)
+  // return httpService.get(`board/${boardId}`)
 }
 
 const user: object = {
