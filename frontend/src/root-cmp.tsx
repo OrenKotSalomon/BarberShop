@@ -7,6 +7,7 @@ import { AppHeader } from './cmps/app-header';
 import { LoginSignUp } from './pages/login-page';
 import { ClientIndex } from './pages/client-index';
 import { ClientList } from './pages/client-list';
+import { ClientAbout } from './pages/client-about';
 
 function App() {
   return <Fragment>
@@ -18,6 +19,7 @@ function App() {
           <Route path="/login" element={<LoginSignUp />} />
           <Route path="/client" element={<ClientList />} />
           <Route path="/client/:clientId" element={<ClientIndex />} />
+          <Route path="/client/:clientId/about" element={<ClientAbout />} />
         </Routes>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useSelector } from 'react-redux'
 import { clientService } from "../services/client-service";
 import { ClientPricing } from "./client-pricing";
@@ -26,10 +26,12 @@ export function ClientIndex() {
 
   console.log(client);
 
-  if (!client) return <div>Loading...</div>
+  if (!client) return <h1>Loading...</h1>
   return (
-    <section className="client-index">
+    <section className="client-index flex column">
+      <h1 className="welcome-title">Welcome Back *Username* !</h1>
       <h1>{client.businessName}</h1>
+      <Link to={`/client/${clientId}/about`} >About Client</Link>
       <ClientPricing packages={client.packages} />
     </section>
   );
