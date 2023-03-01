@@ -23,5 +23,4 @@ export function ClientPricing({ packages, onSelectPack }: pricingProps) {
         </div>)}
 
     </section>
-  );
 }
