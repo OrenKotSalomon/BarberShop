@@ -1,5 +1,3 @@
-import { link } from "fs";
-import { useNavigate } from "react-router-dom"
 
 interface pricingProps {
     packages: {
@@ -8,7 +6,7 @@ interface pricingProps {
         id: string,
         price: number
     }[]
-    onSelectPack: () => void
+    onSelectPack: (packId: string) => void
 }
 
 export function ClientPricing({ packages, onSelectPack }: pricingProps) {
@@ -19,7 +17,7 @@ export function ClientPricing({ packages, onSelectPack }: pricingProps) {
             <h1>{pack.description}</h1>
             <img src={`https://robohash.org/${idx}?set=set5`} />
 
-            <button onClick={onSelectPack}>{pack.price}<span>&#8362;</span></button>
+            <button onClick={() => onSelectPack(pack.id)}>{pack.price}<span>&#8362;</span></button>
         </div>)}
 
     </section>
