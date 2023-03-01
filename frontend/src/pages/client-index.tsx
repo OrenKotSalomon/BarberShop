@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { useSelector } from 'react-redux'
 import { clientService } from "../services/client-service";
 import { ClientPricing } from "./client-pricing";
@@ -13,7 +13,7 @@ export function ClientIndex() {
   };
   const [client, setClient] = useState({} as Client);
   // const client = useSelector<ClientState, ClientState["client"]>((state) => state.client)
-
+  const navigate = useNavigate()
   useEffect(() => {
     getClient()
   }, []);
@@ -22,6 +22,10 @@ export function ClientIndex() {
     const currClient = await loadClient(clientId) as Client;
     setClient(currClient)
 
+  }
+  function onSelectPack() {
+
+    navigate('/calendar')
   }
 
   console.log(client);
@@ -32,7 +36,7 @@ export function ClientIndex() {
       <h1 className="welcome-title">Welcome Back *Username* !</h1>
       <h1>{client.businessName}</h1>
       <Link to={`/client/${clientId}/about`} >About Client</Link>
-      <ClientPricing packages={client.packages} />
+      <ClientPricing packages={client.packages} onSelectPack={onSelectPack} />
     </section>
   );
 }

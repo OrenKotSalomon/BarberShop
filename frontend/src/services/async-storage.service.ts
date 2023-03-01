@@ -1,3 +1,5 @@
+import { Client } from "../models/client-model"
+
 export const storageService = {
     query,
     get,
@@ -20,7 +22,7 @@ function get(entityType: string, entityId: string) {
     })
 }
 
-function post(entityType: string, newEntity: { _id?: string }) {
+function post(entityType: string, newEntity: Client) {
     newEntity = { ...newEntity }
     newEntity._id = _makeId()
     return query(entityType).then((entities: any) => {
@@ -30,7 +32,7 @@ function post(entityType: string, newEntity: { _id?: string }) {
     })
 }
 
-function put(entityType: string, updatedEntity: { _id?: string }) {
+function put(entityType: string, updatedEntity: Client) {
     return query(entityType).then((entities: any) => {
         const idx = entities.findIndex((entity: { _id: string }) => entity._id === updatedEntity._id)
         if (idx < 0) throw new Error(`Update failed, cannot find entity with id: ${updatedEntity._id} in: ${entityType}`)
@@ -52,7 +54,7 @@ function remove(entityType: string, entityId: string) {
 
 // Private functions
 
-function _save(entityType: string, entities: object[]) {
+function _save(entityType: string, entities: Client[]) {
     localStorage.setItem(entityType, JSON.stringify(entities))
 }
 
