@@ -7,14 +7,21 @@ import { store } from "./store";
 export async function loadClient(clientId: string, filterBy?: object) {
     // filter need interface
     try {
-
         const client: Client = await clientService.getById(clientId)
         store.dispatch({ type: SET_CLIENT, payload: client })
         return client
     } catch (error) {
-
         console.log('err', error);
-
     }
+}
 
+export async function selectPack(packageId: string) {
+    // filter need interface
+    try {
+        // const client: Client = await clientService.getById(clientId)
+        // store.dispatch({ type: SET_CLIENT, payload: client })
+        // return client
+    } catch (error) {
+        console.log('err', error);
+    }
 }
