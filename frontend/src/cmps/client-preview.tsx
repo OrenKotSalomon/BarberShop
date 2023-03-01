@@ -13,7 +13,7 @@ export function ClientPreview({ client }: IClient) {
   const dispatch = useDispatch();
 
   const onSelectClient = (clientId: string) => {
-    dispatch({type: SET_CLIENT, payload: client})
+    dispatch({ type: SET_CLIENT, payload: client })
     navigate(`/client/${clientId}`);
   };
 
