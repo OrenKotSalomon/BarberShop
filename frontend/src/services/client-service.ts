@@ -17,7 +17,7 @@ const client: Client = {
   password: "abc123",
   businessName: "Client Shop",
   logo: "url",
-  location: "netanya",
+  location: "Netanya",
   styles: {},
   packages: [
     {
@@ -28,54 +28,24 @@ const client: Client = {
     },
   ],
   futureAvailableCalender: {
-    from: "Date",
-    untill: "date",
+    from: new Date(Date.now()),
+    until: new Date(Date.now() + 1000 * 60  * 60 * 240),
   },
   // need to figure how to build this object name and keys,
-  // availableSpots: {
-  //     day1: [
-  //         {
-  //             // need to configure name og object
-  //             line: {
-  //                 id: '',
-  //                 time: '',
-  //                 istaken: false
-  //             },
-  //             line2: {
-  //                 id: '',
-  //                 time: '',
-  //                 istaken: false
-  //             },
-  //             line3: {
-  //                 id: '',
-  //                 time: '',
-  //                 istaken: false
-  //             },
-
-  //         }
-  //     ],
-  //     day2: [
-  //         {
-  //             // need to configure name og object
-  //             line: {
-  //                 id: '',
-  //                 time: '',
-  //                 istaken: false
-  //             },
-  //             line2: {
-  //                 id: '',
-  //                 time: '',
-  //                 istaken: false
-  //             },
-  //             line3: {
-  //                 id: '',
-  //                 time: '',
-  //                 istaken: false
-  //             },
-
-  //         }
-  //     ]
-  // },
+  availableSpots: {
+    day: [
+      {
+        id: 'd101',
+        time: '',
+        istaken: false
+      },
+      {
+        id: 'd102',
+        time: '',
+        istaken: true
+      },
+    ],
+  },
   clients: {
     demoClient1: {
       // function get client by ID

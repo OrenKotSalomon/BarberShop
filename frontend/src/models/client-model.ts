@@ -13,7 +13,17 @@ export interface Client {
         id: string,
         price: number
     }[]
-    futureAvailableCalender: object,
+    futureAvailableCalender: {
+        from: Date,
+        until: Date
+    },
+    availableSpots: {
+        day: {
+            id: string,
+            time: string,
+            istaken: boolean
+        }[]
+    },
     clients: object,
 }
 

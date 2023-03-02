@@ -10,6 +10,14 @@ export function CalendarSpot() {
         navigate('/client')
     }
 
+    const onPick = (v: Date) => {
+        console.log('v:', v)
+        openLinesModal(v);
+    }
+    console.log('value:', value)
+    const openLinesModal = (v: Date) => {
+        
+    }
     /// need to configure curr barber Id for all logged in users,and for that nvigate to the relevant barber
 
     return (
@@ -17,7 +25,7 @@ export function CalendarSpot() {
             Calendar
             <button onClick={onGoBack}>Back</button>
             <div>
-                <Calendar onChange={onChanger} value={value} />
+                <Calendar selectRange={true} onChange={onChanger} value={value} onClickDay={(value) => onPick(value)}/>
             </div>
         </section>
     )
