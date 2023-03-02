@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { clientService } from "../services/client-service";
 import { ClientPricing } from "./client-pricing";
 import { ClientState } from "../store/client.reducer";
-import { loadClient } from "../store/client.action";
+import { loadClient, setSelectedPack } from "../store/client.action";
 import { Client } from "../models/client-model";
 
 export function ClientIndex() {
@@ -24,6 +24,7 @@ export function ClientIndex() {
   }
   function onSelectPack(packId: string) {
     console.log("packId:", packId)
+    setSelectedPack(packId)
     navigate("/calendar")
   }
 

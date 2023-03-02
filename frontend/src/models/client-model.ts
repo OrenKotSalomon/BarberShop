@@ -16,3 +16,10 @@ export interface Client {
     futureAvailableCalender: object,
     clients: object,
 }
+
+export interface Pack {
+    description: string,
+    displayImg: string,
+    id: string,
+    price: number
+}

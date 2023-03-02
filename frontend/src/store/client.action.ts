@@ -1,7 +1,7 @@
 
 import { Client } from "../models/client-model";
 import { clientService } from "../services/client-service";
-import { SET_CLIENT } from "./client.reducer";
+import { SET_CLIENT, SET_PACK } from "./client.reducer";
 import { store } from "./store";
 
 export async function loadClient(clientId: string, filterBy?: object) {
@@ -15,12 +15,10 @@ export async function loadClient(clientId: string, filterBy?: object) {
     }
 }
 
-export async function selectPack(packageId: string) {
-    // filter need interface
+export async function setSelectedPack(packageId: string) {
     try {
-        // const client: Client = await clientService.getById(clientId)
-        // store.dispatch({ type: SET_CLIENT, payload: client })
-        // return client
+        store.dispatch({ type: SET_PACK, payload: packageId })
+        return packageId
     } catch (error) {
         console.log('err', error);
     }
